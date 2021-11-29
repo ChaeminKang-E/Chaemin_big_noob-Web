@@ -2,7 +2,7 @@ function add(a, b){
     return a+b
 }
 function circ(n){
-    return n*Math.PI
+    return Math.round((n*n*Math.PI)*1000)/1000
 }
 function smaller(a, b){
     return a+b>100?true:false
@@ -13,5 +13,5 @@ function leap(y){
 function ten(a, b){
     return a==10||b==10||a+b==10?true:false
 }
-let XfromF //type =(any function name)(and parameters value) here
+let XfromF = circ(2)
 console.log(XfromF)
