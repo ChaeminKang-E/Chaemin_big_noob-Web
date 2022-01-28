@@ -7,16 +7,17 @@
     <title>Not Desmos</title>
 </head>
 <body>
-    <input type="number" id="first" value=0>
-    <label>+</label>
-    <input type="number" id="second" value=0>
-    <label>=</label>
-    <label id="result"></label>
     <script>
-        {
-            let one=document.getElementById("first").innerHTML, two=document.getElementById("second").innerHTML;
+        function result(){
+            let one=Number(document.getElementById("first").value), two=Number(document.getElementById("second").value);
+            console.log(one)
             document.getElementById("result").innerHTML = one+two
         }
     </script>
+    <input type="number" id="first" onchange="result()">
+    <label>+</label>
+    <input type="number" id="second" onchange="result()">
+    <label>=</label>
+    <label id="result"></label>
 </body>
 </html>
