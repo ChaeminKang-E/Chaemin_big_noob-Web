@@ -14,10 +14,12 @@
             document.getElementById("result").innerHTML = one+two
         }
     </script>
-    <input type="number" id="first" onchange="result()">
+    <input type="number" placeholder=0 id="first">
     <label>+</label>
-    <input type="number" id="second" onchange="result()">
-    <label>=</label>
+    <input type="number" placeholder=0 id="second">
+    <br>
+    <input type="button" value="Sum up" onclick="result()">
+    <br>
     <label id="result"></label>
 </body>
 </html>
