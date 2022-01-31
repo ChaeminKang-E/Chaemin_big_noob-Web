@@ -11,11 +11,26 @@
         function result(){
             let one=Number(document.getElementById("first").value), two=Number(document.getElementById("second").value);
             console.log(one)
-            document.getElementById("result").innerHTML = one+two
+            if(document.getElementById("plus").checked) document.getElementById("result").innerHTML = one+two
+            else if(document.getElementById("minus").checked) document.getElementById("result").innerHTML = one-two
+            else if(document.getElementById("times").checked) document.getElementById("result").innerHTML = one*two
+            else if(document.getElementById("divided").checked) document.getElementById("result").innerHTML = one/two
+            else document.getElementById("result").innerHTML = "Please select calculation method"
         }
     </script>
     <input type="number" placeholder=0 id="first">
-    <label>+</label>
+    <br>
+    <div>
+        <input type="radio" name="meta" id="plus">
+        <label>+</label>
+        <input type="radio" name="meta" id="minus">
+        <label>-</label>
+        <input type="radio" name="meta" id="times">
+        <label>x</label>
+        <input type="radio" name="meta" id="divided">
+        <label>÷</label>
+    </div>
+    <br>
     <input type="number" placeholder=0 id="second">
     <br>
     <input type="button" value="Sum up" onclick="result()">
